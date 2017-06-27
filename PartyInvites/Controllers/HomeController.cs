@@ -9,8 +9,11 @@ namespace PartyInvites.Controllers
     {
         public ViewResult Index()
         {
-            int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+            DateTime EventTime = new DateTime(2017, 7, 6);
+            TimeSpan Duration = EventTime - DateTime.Now;
+            string TimeTillEvent = Duration.ToString();
+            ViewBag.EventTime = EventTime;
+            ViewBag.TimeTillEvent = TimeTillEvent;
             return View("MyView");
         }
 

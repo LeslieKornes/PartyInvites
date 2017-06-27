@@ -11,8 +11,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>RsvpForm</title>
-    <link href="~/css/styles.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
 </head>
 <body>
     <div class="panel panel-success">
@@ -38,6 +38,27 @@
                         <option value="">Choose an option:</option>
                         <option value="true">Yes, count me in!</option>
                         <option value="false">No, I can't make it.</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>What meal would you prefer?</label>
+                    <select class="form-control" asp-for="Meal">
+                        <option value="">Choose an option:</option>
+                        <option value="Fish">Fish</option>
+                        <option value="Steak">Steak</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>How many guests will you be bringing?</label>
+                    <select class="form-control" asp-for="PlusOnes">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 <div class="text-center">

@@ -17,5 +17,9 @@ namespace PartyInvites.Models
 
         [Required(ErrorMessage = "Please specify whether or not you will be attending")]
         public bool? WillAttend { get; set; }
+
+        public string Meal { get; set; }
+
+        public byte PlusOnes { get; set; }
     }
 }
