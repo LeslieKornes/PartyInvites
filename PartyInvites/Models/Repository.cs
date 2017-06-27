@@ -2,7 +2,7 @@
 
 namespace PartyInvites.Models
 {
-    public class Repository
+    public static class Repository
     {
         private static List<GuestResponse> responses = new List<GuestResponse>();
 
