@@ -1,0 +1,22 @@
+﻿@model PartyInvites.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AlreadyRegistered</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body class="text-center">
+    <p>
+        <h1>Hey, @Model.Name! You must be really excited about the party-it seems you've already registered!</h1>
+    </p>
+    Click <a class="nav-link" asp-action="Index">here</a>
+    to see who else is coming.
+</body>
+</html>

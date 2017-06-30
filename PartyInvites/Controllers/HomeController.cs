@@ -28,7 +28,17 @@ namespace PartyInvites.Controllers
         {
             if (ModelState.IsValid) { 
             Repository.AddResponse(guestResponse);
-            return View("Thanks", guestResponse);
+                if (Repository.Responses.Count<GuestResponse>() > 1 )
+                {
+                    foreach (var response in Repository.Responses)
+                    {
+                        if (guestResponse.Name == response.Name && guestResponse.Email == response.Email && guestResponse.Phone == response.Phone)
+                        {
+                            return View("AlreadyRegistered", guestResponse);
+                        }
+                    }
+                }
+                return View("Thanks", guestResponse);
             }
             else
             {
